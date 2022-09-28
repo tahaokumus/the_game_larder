@@ -1,0 +1,148 @@
+@import './constants';
+
+.section-contact {
+	padding-right: 3rem;
+	padding-left: 3rem;
+
+	@media screen and ($screen-mobile) {
+		padding-right: 1.5rem;
+		padding-left: 1.5rem;
+	}
+
+	.container {
+		max-width: 1080px;
+		padding: 2rem;
+		border-width: 4px;
+		border-color: var(--color-dark);
+		border-style: solid;
+	}
+	.contact-info {
+		display: flex;
+		justify-content: space-between;
+
+		@media screen and ($screen-mobile) {
+			flex-direction: column;
+			justify-content: center;
+		}
+
+		gap: 3rem;
+		border-bottom-width: 0;
+
+		.contact-item {
+			width: 100%;
+			text-align: center;
+
+			.contact-title {
+				font-size: 1rem;
+				letter-spacing: 4px;
+				font-weight: bold;
+				padding-bottom: 0.75rem;
+			}
+
+			.contact-text {
+				color: var(--color-primary);
+				font-size: 1rem;
+				font-weight: 600;
+				line-height: 1.8em;
+				text-decoration: none;
+				line-break: anywhere;
+			}
+
+			.social-links {
+				display: flex;
+				justify-content: center;
+				gap: 0.5rem;
+
+				.social-link {
+					background-color: var(--color-primary);
+					width: 32px;
+					height: 32px;
+					padding: 0.5rem;
+					transition: 0.3s;
+
+					display: flex;
+					align-items: center;
+					justify-content: center;
+
+					&:hover {
+						background-color: var(--color-secondary);
+					}
+
+					img {
+						height: 100%;
+						width: auto;
+					}
+				}
+			}
+		}
+	}
+
+	.working-hours {
+		display: grid;
+		width: 100%;
+		z-index: -1;
+
+		& > * {
+			grid-area: 1/1;
+		}
+
+		@media screen and($screen-mobile) {
+			border: none;
+			padding: 0;
+		}
+
+		.background-container {
+			display: grid;
+			width: 100%;
+			z-index: -1;
+
+			& > * {
+				grid-area: 1/1;
+			}
+
+			img {
+				width: 100%;
+				height: 100%;
+				object-fit: cover;
+			}
+
+			.overlay {
+				width: 100%;
+				height: 100%;
+				background: linear-gradient(
+					180deg,
+					#000000 0%,
+					rgba(0, 0, 0, 0.7) 100%
+				);
+			}
+		}
+
+		.content-container {
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+			text-align: center;
+			padding: 6rem 4rem;
+
+			@media screen and($screen-mobile) {
+				padding: 3rem 2rem;
+			}
+
+			.section-title {
+				color: var(--color-light);
+				max-width: 600px;
+			}
+
+			.section-paragraph {
+				color: var(--color-light);
+				max-width: 600px;
+				font-size: 2rem;
+				padding-bottom: 1.5rem;
+			}
+
+			.cta {
+			}
+		}
+	}
+}

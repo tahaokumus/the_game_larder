@@ -1,0 +1,60 @@
+.cta {
+	display: inline-block;
+	padding: 0.3rem 1rem;
+	background-color: var(--color-primary);
+	color: var(--color-light);
+	margin-top: 2rem;
+	text-decoration: none;
+	border-style: solid;
+	border-color: transparent;
+	border-width: clamp(0.25rem, 0.1rem + 1vw, 0.75rem);
+	letter-spacing: 2px;
+	font-size: 1rem;
+	font-weight: bold;
+	text-transform: uppercase;
+	line-height: 1.7rem;
+	transition: 0.3s;
+
+	&:hover,
+	&:focus {
+		color: var(--color-light);
+		background-color: var(--color-secondary);
+	}
+}
+
+.section-suptitle {
+	font-family: var(--font-text);
+	font-weight: bold;
+	text-transform: uppercase;
+	color: var(--color-primary);
+	letter-spacing: 4px;
+	line-height: 1.6em;
+	font-size: 1rem;
+	padding-bottom: 0.75rem;
+}
+
+.section-title {
+	font-family: var(--font-title);
+	font-size: clamp(1.5rem, 1.5rem + 2.5vw, 3.5rem);
+	line-height: 1.4em;
+	color: var(--color-dark);
+	font-weight: 500;
+	padding-bottom: 0.75rem;
+}
+
+.section-paragraph {
+	font-size: 1rem;
+	line-height: 2rem;
+	font-family: var(--font-text);
+	font-weight: 600;
+	color: var(--color-gray);
+}
+
+.section-suptitle,
+.section-title,
+.section-paragraph {
+	&::selection {
+		background: var(--color-primary);
+		color: var(--color-light);
+	}
+}

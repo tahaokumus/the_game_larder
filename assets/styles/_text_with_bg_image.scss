@@ -1,0 +1,50 @@
+@import './constants';
+
+.section-text-with-bg-image {
+	display: grid;
+	width: 100%;
+	z-index: -1;
+
+	& > * {
+		grid-area: 1/1;
+	}
+
+	.background-container {
+		display: grid;
+		width: 100%;
+		z-index: -1;
+
+		& > * {
+			grid-area: 1/1;
+		}
+
+		img {
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+		}
+
+		.overlay {
+			width: 100%;
+			height: 100%;
+			background: linear-gradient(165deg, #000000 20%, rgba(0, 0, 0, 0) 100%);
+		}
+	}
+
+	.content-container {
+		padding-top: 100px;
+		padding-bottom: 30vw;
+
+		@media screen and($screen-mobile) {
+			text-align: center;
+			padding-top: 3rem;
+			padding-bottom: 3rem;
+		}
+
+		.section-title,
+		.section-paragraph {
+			color: var(--color-light);
+			max-width: 600px;
+		}
+	}
+}

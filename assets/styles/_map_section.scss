@@ -1,0 +1,15 @@
+@import './constants';
+
+.section-map {
+	filter: grayscale(60%);
+
+	.container {
+		max-width: min(80%, 1080px);
+		padding: 2rem 0;
+
+		iframe {
+			width: 100%;
+			height: clamp(300px, 40vh, 440px);
+		}
+	}
+}

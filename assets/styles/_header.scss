@@ -1,0 +1,45 @@
+@import './constants';
+
+.header-container {
+	display: flex;
+	gap: 1rem;
+	padding-top: 1rem;
+	padding-bottom: 1rem;
+
+	@media screen and($screen-mobile) {
+		flex-direction: column;
+		justify-content: center;
+		text-align: center;
+	}
+
+	.logo-container {
+		// height: 6rem;
+
+		img {
+			max-width: 90%;
+			max-height: 6rem;
+		}
+	}
+
+	.title-container {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+
+		& > * {
+			font-family: var(--font-text);
+			font-weight: bold;
+			text-transform: uppercase;
+			margin: 0;
+		}
+
+		.est {
+			color: var(--color-secondary);
+			letter-spacing: 4px;
+		}
+
+		.slogan {
+			color: var(--color-primary);
+		}
+	}
+}
